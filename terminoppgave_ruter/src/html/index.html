@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reiseplanlegger</title>
+    <link rel="stylesheet" href="/src/css/style.css">
+</head>
+<body>
+    <div class="index_wrapper">
+        <div class="header">
+            <h1 id="i_h1">Reiseplanlegger</h1>
+            <button class="loginbutton button3" onclick="login()">Log in</button>
+        </div>
+
+        <!------->
+        <!--FRA-->
+        <!------->
+        <div id="fra_div">
+            <p class="i_p">Fra:</p>
+            <form id="i_fra" onsubmit="return false;">
+                <input type="text" id="i_ifra">
+            </form>
+            <p id="fra_div_input"></p>
+        </div>
+
+        <!------->
+        <!--TIL-->
+        <!------->
+        <div id="til_div">
+            <p class="i_p">Til:</p>
+            <!-- Append fra Javascript når nødvendig -->
+            <form id="i_til" onsubmit="return false;">
+                <input type="text" id="i_itil">
+            </form>
+            <p id="til_div_input"></p>
+        </div>
+        <p id="velg"></p>
+    </div>
+    <script src="/src/js/index.js"></script>
+</body>
+</html>

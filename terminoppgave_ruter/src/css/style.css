@@ -1,0 +1,306 @@
+body{margin: 0; padding: 0; background-color: #121212;}
+
+/* ----------------- */
+/* ----- INDEX ----- */
+/* ----------------- */
+.index_wrapper{display: flex; flex-flow: column; align-items: center; color: white; font-family: 'TID UI'; width: 100%; height: 100%;}
+
+/* Index h1 (Overskrift) */
+#i_h{margin: 1%;}
+
+/* Index p (Normal tekst) */
+.i_p{margin: 0.5%; margin-bottom: 0.25%;}
+.e_p{margin: 2%; margin-bottom: 0.5%;}
+.i_p2{margin: 0.5%; margin-top: 1%; margin-bottom: 0.25%;}
+
+/* Index input form fra / til */
+#i_fra, #i_til{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    width: 200px;
+}
+/* Index input fra / til */ #i_ifra, #i_itil{height: 100%; width: 100%;}
+#i_ifra:disabled, #i_itil:disabled {
+    color: white;
+}
+
+/* Velgemeny */
+#velg{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+.stasjonspelement{margin: 10px;}
+.stasjonsbutton{margin-left: 5px; border: 0; background-color: #00308F; color: white; border-radius: 5px; height: 100%; width: fit-content;}
+.stasjonsbutton:hover{background-color: #00488f; cursor: pointer;}
+
+/* Index button */
+#i_b{
+    background-color: #00308F;
+    width: 100px;
+    height: 25px;
+    margin-top: 1%;
+    border: 0;
+    color: white;
+    border-radius: 5px;
+}
+#i_b:hover{background-color: #00488f; cursor: pointer;}
+
+/* ---------------- */
+/* --- AVGANGER --- */
+/* ---------------- */
+
+#resultater{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
+
+.departureDiv{
+    display: flex;
+    flex-flow: row;
+    background-color: #212121;
+    padding: 8px;
+    margin: 8px;
+    border-radius: 8px;
+    text-align: center;
+    height: max-content;
+    align-items: center;
+    justify-content: center;
+    width: max-content;
+}
+.aimedStartDiv{
+    margin-left: 8px;
+    font-size: 200%;
+}
+.aimedEndDiv {
+    margin-right: 8px;
+    font-size: 200%;
+}
+.lineDiv{
+    border-radius: 8px;
+    margin: 8px;
+}
+.lineDiv2{
+    margin: 8px;
+    padding: 4px;
+    font-size: 200%;
+    border-radius: 8px;
+}
+.orange{
+    background-color: #EC700C;
+}
+.other{
+    background-color: #757575;
+}
+.red{
+    background-color: #E60000;
+}
+.green{
+    background-color: #75A300;
+}
+.blue{
+    background-color: #0B91EF;
+}
+.walkDiv{
+    max-width: 25px;
+    color: white;
+    margin: 0px 8px 0px 8px;
+}
+.flyDiv{
+    max-width: 50px;
+    color: white;
+    margin: 0px 8px 0px 8px;
+}
+
+.fullDiv{
+    background-color: #212121;
+    border-radius: 8px;
+    padding: 16px;
+}
+.fulltimeDisplay{
+    display: flex;
+    font-family: 'TID UI';
+    justify-content: center;
+    align-items: center;
+    flex-flow: row;
+    height: fit-content;
+    font-size: 200%;
+}
+.timeDisplayEdit{
+    text-decoration: line-through;
+    font-size: 10px;
+}
+.startDiv{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+.endDiv{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+.totalTime{
+    margin-left: 16px;
+}
+.lineDivLeg{
+    margin: 0px 4px 0px 4px;
+}
+.legDiv{
+    background-color: #292929;
+    padding: 8px;
+    margin: 8px;
+    display: flex;
+    flex-flow: column;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    font-size: 150%;
+}
+.lineNumberDiv{
+    border-radius: 8px;
+    padding: 8px;
+    margin-left: 16px;
+}
+.lineTextDiv{
+    margin-left: 8px;
+}
+.walkDiv2{
+    height: 32px;
+    margin-left: 16px;
+}
+.flyDiv2{
+    height: 32px;
+    margin-left: 16px;
+}
+.legDivLine1{
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+}
+.legDivLine2{
+    display: flex;
+    flex-flow: row;
+    font-size: 75%;
+    margin-top: 8px;
+    background-color: #292929;
+    padding: 8px;
+    border-radius: 8px;
+}
+/* ----------------- */
+/* ----- FONTS ----- */
+/* ----------------- */
+@font-face {
+    font-family: 'TID UI';
+    src: url(/src/fonts/TIDUI-Regular.ttf);
+}
+#map{
+    display: block;
+}
+.stopsDiv{
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+    font-size: 75%;
+    margin-left: 8px;
+    background-color: #313131;
+    border-radius: 8px;
+    padding: 8px;
+}
+.startPlaceDiv{
+    margin: auto;
+    font-size: 125%;
+}
+.endPlaceDiv{
+    margin: auto;
+    font-size: 125%;
+    margin-left: 8px;
+}
+
+.button2{
+    border: 0;
+    background-color: blue;
+    color: white;
+    margin: 8px;
+    padding: 4px;
+    border-radius: 8px;
+}
+.button2:hover{
+    cursor: pointer;
+}
+#avgangankomst{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.avganginputh1, .ankomstinputh1{
+    margin: 8px;
+}
+.stopPlaceCount{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-left: 8px;
+    font-size: 125%;
+}
+.stopDivAim{
+    text-decoration: line-through;
+}
+.stopDiv{
+    display: flex;
+    flex-flow: row;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.stopDivAim, .stopDivExp, .stopName{
+    margin-right: 2px;
+    margin-left: 2px;
+}
+#fra_div, #til_div{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background-color: #212121;
+    margin: 8px;
+    padding: 16px;
+    border-radius: 8px;
+}
+#fra_div_input, #til_div_input{
+    margin: 0px;
+    text-align: center;
+}
+.header{
+    width: 100%;
+    background-color: #212121;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+}
+.loginbutton{
+    position: absolute;
+    right: 1%;
+    left: auto;
+    top: 1%;
+    height: 64px;
+    width: 64px;
+    border: 0;
+    background-color: blue;
+    color: white;
+    border-radius: 8px;
+}

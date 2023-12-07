@@ -1,0 +1,6 @@
+INSERT INTO brukere (brukernavn, passord) VALUES
+('alsta', '123'),
+('badositt', '6969');
+
+INSERT INTO lagrede_reiser (lagrede_brukere_id, avgangstid, ankomsttid) VALUES
+('1', '2023-12-05 16:00:00', '2023-12-05 16:45:00'),

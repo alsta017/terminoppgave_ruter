@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ekstra valg</title>
+    <link rel="stylesheet" href="/src/css/style.css">
+</head>
+<body>
+    <div class="index_wrapper">
+        <h1 id="i_h1">Ekstra valg</h1>
+
+        <!----------------------------->
+        <!--VELG AVGANG ELLER ANKOMST-->
+        <!----------------------------->
+        <div id=avgangankomst>
+            <button class="visavgangbutton button2" id="selectavgangbutton" onclick="avgang()">Velg avgangstid</button>
+            <button class="visankomstbutton button2" id="selectankomstbutton" onclick="ankomst()">Velg ankomsttid</button>
+        </div>
+
+        <!------------>
+        <!--BYTTETID-->
+        <!------------>
+        <p class="e_p">Byttetid:</p>
+        <select name="byttetid" id="byttetidid">
+            <option value="0" selected>0 min</option>
+            <option value="1">1 min</option>¨
+            <option value="2">2 min</option>
+            <option value="3">3 min</option>
+            <option value="4">4 min</option>
+            <option value="5">5 min</option>
+            <option value="6">6 min</option>
+            <option value="7">7 min</option>
+            <option value="8">8 min</option>
+            <option value="9">9 min</option>
+            <option value="10">10 min</option>
+            <option value="11">11 min</option>
+            <option value="12">12 min</option>
+            <option value="13">13 min</option>
+            <option value="14">14 min</option>
+            <option value="15">15 min</option>
+            <option value="16">16 min</option>
+            <option value="17">17 min</option>
+            <option value="18">18 min</option>
+            <option value="19">19 min</option>
+            <option value="20">20 min</option>
+            <option value="21">21 min</option>
+            <option value="22">22 min</option>
+            <option value="23">23 min</option>
+            <option value="24">24 min</option>
+            <option value="25">25 min</option>
+            <option value="26">26 min</option>
+            <option value="27">27 min</option>
+            <option value="28">28 min</option>
+            <option value="29">29 min</option>
+            <option value="30">30 min</option>
+        </select>
+        <!-- Gå til avganger knapp -->
+        <button class="button2" onclick="avganger()">Gå videre</button>
+    </div>
+    <script src="/src/js/ekstra_valg.js"></script>
+</body>
+</html>
