@@ -6,11 +6,37 @@ let iplEl = document.getElementById("i_pl");
 let fraDivEl = document.getElementById("fra_div_input");
 let tildivEl = document.getElementById("til_div");
 let tildivElinput = document.getElementById("til_div_input");
+let headerEl = document.getElementById("header");
 var searchTimeout;
 var velgEnArr = [];
 var navnArr = [];
 tildivEl.style.display = "none"
 fraEl.disabled = false;
+
+const loggedinvalue = ('; '+document.cookie).split(`; loggedin=`).pop().split(';')[0];
+const usernamevalue = ('; '+document.cookie).split(`; username=`).pop().split(';')[0];
+
+if (loggedinvalue !== "true") {
+    let loggedinbuttondiv = document.createElement("button");
+    loggedinbuttondiv.className = "loginbutton button3";
+    loggedinbuttondiv.setAttribute("onclick", "login()");
+    loggedinbuttondiv.textContent = "Log in";
+    headerEl.appendChild(loggedinbuttondiv);
+} else {
+    let loggedintextdiv = document.createElement("div");
+    let loggedintext = document.createElement("p")
+    let logoutbutton = document.createElement("button")
+    loggedintextdiv.className = "loggedintextdiv";
+    loggedintext.className = "loggedintext";
+    logoutbutton.className = "logoutbutton button2";
+    logoutbutton.setAttribute("onclick", "logout()");
+    loggedintext.innerHTML = "Logged in as " + usernamevalue;
+    logoutbutton.textContent = "Log out";
+    loggedintextdiv.appendChild(loggedintext);
+    loggedintextdiv.appendChild(logoutbutton);
+    headerEl.appendChild(loggedintextdiv);
+}
+
 fraEl.onkeydown = function () {
     velgEnArr = [];
     fraDivEl.textContent = "";
@@ -160,7 +186,12 @@ function valg2 () {
         tildivElinput.textContent = "";
         window.location.replace("/ekstra_valg");
     };
+    
 
 function login() {
     location.replace("/login");
+};
+
+function logout() {
+    location.replace("/logout");
 };

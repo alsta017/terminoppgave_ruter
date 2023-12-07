@@ -4,22 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Register</title>
     <link rel="stylesheet" href="/src/css/style.css">
 </head>
 <body>
     <div class="index_wrapper">
         <div class="header">
-            <h1 id="i_h1">Login</h1>
+            <h1 id="i_h1">Register</h1>
         </div>
-        <form action="/loginauth" method="post" id="loginform">
+        <form action="/registerauth" method="post" id="loginform">
             <label for="username">Username:</label>
             <input type="text" name="username" placeholder="Username" id="username" autocomplete="username" required>
             <label for="password">Password:</label>
             <input type="password" name="password" placeholder="Password" id="password" autocomplete="current-password" required>
-            <input type="submit" value="Login" class="button2">
+            <input type="submit" value="Register" class="button2">
         </form>
-        <button class="registerbutton button2" onclick="register()">Register</button>
     </div>
     <script src="/src/js/login.js"></script>
 </body>

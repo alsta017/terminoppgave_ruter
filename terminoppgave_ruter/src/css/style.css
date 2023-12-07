@@ -297,10 +297,52 @@ body{margin: 0; padding: 0; background-color: #121212;}
     right: 1%;
     left: auto;
     top: 1%;
+    bottom: auto;
     height: 64px;
-    width: 64px;
+    width: 90px;
     border: 0;
     background-color: blue;
     color: white;
     border-radius: 8px;
+    font-size: 125%;
+}
+.loginbutton:hover{
+    cursor: pointer;
+}
+#loginform{
+    margin-top: 8px;
+    border-radius: 8px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #1a1a1a;
+    padding: 8px;
+}
+#passord, #username{
+    margin-bottom: 8px;
+}
+.loggedintextdiv{
+    position: absolute;
+    right: 1%;
+    top: 1%;
+    left: auto;
+    bottom: auto;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+.loggedintext{
+    margin: 0px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+.errorDiv{
+    font-size: 100%;
+    padding: 8px;
+    margin-top: 4px;
+}
+.registerbutton{
+    margin-top: 16px;
 }

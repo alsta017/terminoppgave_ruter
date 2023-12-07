@@ -15,7 +15,6 @@ if (ankomstEl) {
 } else {
     avgangogavkomstel = new Date().toISOString();
 }
-console.log(avgangogavkomstel);
 let byttetid2El = localStorage.getItem("byttetid");
 let byttetid2ElSec = byttetid2El * 60;
 
@@ -97,7 +96,6 @@ function reise () {
     })
     .then(res => res.json())
     .then(stopPlaceData => {
-        console.log(stopPlaceData);
         localStorage.setItem("stopPlaceData", JSON.stringify(stopPlaceData));
         p = 0;
         let html = '';

@@ -21,7 +21,6 @@ for (let i = 0; i < trips.length; i++) {
 };
 
 let this_departure = trips[ivalue];
-console.log(this_departure);
 
 let fullDiv = document.createElement('div');
 fullDiv.className = "fullDiv";
