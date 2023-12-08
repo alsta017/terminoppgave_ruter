@@ -7,6 +7,7 @@ selectavgangbuttonEl.style.display = "block";
 selectankomstbuttonEl.style.display = "block";
 
 function avgang() {
+    // Lage avgang elementet når nødvendig
     let avgangInputElh1 = document.createElement("p");
     let avgangInputEl = document.createElement("input");
     avgangInputElh1.textContent = "Velg avgangstid";
@@ -21,6 +22,7 @@ function avgang() {
 }
 
 function ankomst() {
+    // Lage ankomst elementet når nødvendig
     let ankomstInputElh1 = document.createElement("p");
     let ankomstInputEl = document.createElement("input");
     ankomstInputElh1.textContent = "Velg ankomsttid";
@@ -34,7 +36,9 @@ function ankomst() {
     avgangankomstEl.appendChild(ankomstInputEl);
 }
 
+// trykket gå videre knapp
 function avganger() {
+    // lagre info fra ekstra_valg
     var avgangInputCheck = document.getElementById("avganginput");
     var ankomstInputCheck = document.getElementById("ankomstinput");
     var byttetidCheck = document.getElementById("byttetidid")
@@ -48,6 +52,7 @@ function avganger() {
         var ankomstInputDate = new Date(ankomstInputCheck.value).toISOString();
         localStorage.setItem("ankomst", ankomstInputDate);
     }
+    // send bruker videre
     localStorage.setItem("byttetid", byttetidCheck.value);
     location.replace("/reiseplanlegger");
 }

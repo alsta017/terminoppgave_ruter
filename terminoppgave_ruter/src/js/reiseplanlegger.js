@@ -7,6 +7,7 @@ let avgangEl = localStorage.getItem("avgang");
 let ankomstEl = localStorage.getItem("ankomst");
 let arriveBy = "false";
 let avgangogavkomstel = "";
+// avgang eller ankomst?
 if (ankomstEl) {
     avgangogavkomstel = ankomstEl;
     arriveBy = "true";
@@ -21,6 +22,7 @@ let byttetid2ElSec = byttetid2El * 60;
 
 reise();
 function reise () {
+    // hente data fra entur journey planner api
     fetch('https://api.entur.io/journey-planner/v3/graphql', {
     method: 'POST',
     headers: {
@@ -96,6 +98,7 @@ function reise () {
     })
     .then(res => res.json())
     .then(stopPlaceData => {
+        // lagre til senere bruk
         localStorage.setItem("stopPlaceData", JSON.stringify(stopPlaceData));
         p = 0;
         let html = '';
@@ -104,6 +107,7 @@ function reise () {
         i_h1el.innerText = `Resultater fra ${search.fromPlace.name} til ${search.toPlace.name}`;
         // For alle avanger length
         for (let i = 0; i < trips.length; i++) {
+            // lager alle datoformatene
             const thisTrip = trips[i];
             const aimedStart = new Date(thisTrip.aimedStartTime).toLocaleTimeString('no-NO', {hour: '2-digit', minute:'2-digit'});
             const expectedStartingTime = new Date(thisTrip.expectedStartTime).toLocaleTimeString('no-NO', {hour: '2-digit', minute:'2-digit'});
@@ -111,15 +115,18 @@ function reise () {
             const expectedEndingTime = new Date(thisTrip.expectedEndTime).toLocaleTimeString('no-NO', {hour: '2-digit', minute:'2-digit'});
             const lineDiv = thisTrip;
 
+            // div rundt hele
             const departureF = document.createElement('div');
             departureF.className = "departureDiv";
             departureF.id = p;
             departureF.setAttribute("onclick","avgangclick(this.id)");
 
+            // starte klokkeslett div
             const aimedStartF = document.createElement('div');
             aimedStartF.className = 'aimedStartDiv';
             aimedStartF.textContent = aimedStart + "-";
 
+            // slutte klokkeslet div
             const aimedEndF = document.createElement('div');
             aimedEndF.className = 'aimedEndDiv';
             aimedEndF.textContent = aimedEnd;
@@ -132,6 +139,7 @@ function reise () {
                     if (thisTrip.legs[b].line.publicCode) {
                         const lineDivF = document.createElement('div');
                         lineDivF.className = "lineDiv2";
+                        // Skjekk farge på linje greie
                         lineDivF.textContent = thisTrip.legs[b].line.publicCode;
                             if (thisTrip.legs[b].line.publicCode > 0 && thisTrip.legs[b].line.publicCode < 10 && thisTrip.legs[b].line.publicCode.length < 2) {
                                 lineDivF.className = lineDivF.classList + ' orange';
@@ -146,12 +154,14 @@ function reise () {
                             };
                         departureF.appendChild(lineDivF);
                     } else if (thisTrip.legs[b].mode == "air") {
+                        // hvis fly lage fly img
                         const lineDivF = document.createElement('img');
                         lineDivF.className = "flyDiv";
                         lineDivF.src = "/src/images/plane.png";
                         departureF.appendChild(lineDivF);
                     }
                 } else {
+                    // hvis walk lage walk element + img
                     const lineDivF = document.createElement('img');
                     lineDivF.className = "walkDiv";
                     lineDivF.src = "/src/images/walk.png";
@@ -168,6 +178,7 @@ function reise () {
 };
 
 function avgangclick(avgangid) {
+    // Skjekke hvilken avgang som ble clicket
     localStorage.setItem("avgangclicked", avgangid);
     window.location.replace("/trip");
 };
