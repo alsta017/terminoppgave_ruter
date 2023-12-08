@@ -9,11 +9,15 @@
 </head>
 <body>
     <div class="index_wrapper">
-        <h1 id="i_h1">Laster inn...</h1>
+        <div class="header">
+            <h1 id="i_h1">Laster inn...</h1>
+        </div>
         <div id="visellerskulallestopp"></div>
         <!-- Den spesifikke tripen skal vises i departuredisplay (Alt gjøres i JS) -->
         <div id="departuredisplay"></div>
-        <button id="lagre_reise" onclick="lagre_reise()">Lagre reise</button>
+        <form action="/lagre_reisen" method="post" id="lagrereise">
+            <input type="submit" value="Lagre reise" class="button2">
+        </form>
     </div>
     <script src="/src/js/trip.js"></script>
 </body>

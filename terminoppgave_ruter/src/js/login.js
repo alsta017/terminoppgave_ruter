@@ -13,6 +13,8 @@ if (errormessage) {
         errorDiv.textContent = "Registered succesfully"
     } else if (errormessage == "e_uc") {
         errorDiv.textContent = "Error creating user"
+    } else if (errormessage == "u_t") {
+        errorDiv.textContent = "Username is already taken"
     } else {
         errorDiv.textContent = "Something went wrong";
     }
